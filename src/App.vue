@@ -2,7 +2,10 @@
   <div>
     <h1>ep 5</h1>
     <h2>{{ greet }}, {{ name }}! </h2>
-    <h2 v-text="channel"></h2>
+    <p v-html="channel"></p>
+    <p v-html="channel2"></p>
+    <h2 v-html="channel"></h2>
+    <div v-html="hack"></div>
   </div>
 </template>
 
@@ -14,7 +17,9 @@ export default {
     return {
       'name' : 'Kamrul',
       'greet': 'Hello',
-      'channel': 'CodeEvolution'
+      'channel': '<b>CodeEvolution</b>',
+      'channel2': 'CodeEvolution',
+      'hack' : `<a href="#" onclick="alert('You have been hacked')">Win A Prize</a>`
     }
   },
 }
