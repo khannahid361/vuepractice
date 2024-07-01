@@ -1,5 +1,9 @@
 <template>
-  <h1>Hello, Vue!</h1>
+  <div>
+    <h1>ep 5</h1>
+    <h2>{{ greet }}, {{ name }}! </h2>
+    <h2 v-text="channel"></h2>
+  </div>
 </template>
 
 <script>
@@ -8,7 +12,9 @@ export default {
   name: 'App',
   data() {
     return {
-      'name' : 'Kamrul'
+      'name' : 'Kamrul',
+      'greet': 'Hello',
+      'channel': 'CodeEvolution'
     }
   },
 }
