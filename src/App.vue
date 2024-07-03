@@ -37,9 +37,16 @@
       <h4>lo553</h4>
     </template>
     <h1>episode 12 Vshow is used for toggling html</h1>
-      <h4 v-show="!showelements">pq</h4>
-      <h4>pe</h4>
-      <h4>llll</h4>
+    <h4 v-show="showelements">pq</h4>
+    <hr style="border: 1px solid black;">
+    <h1>Episode 13 learning for loop</h1>
+    <h4 v-for="(list, index) in lists" :key="index">{{ list }}-{{ index }}</h4>
+    <h4 v-for="(dick, index) in fullnames" :key="index">{{ dick.first }} - {{ dick.last }}</h4>
+    <div v-for="(actor, index) in actors" :key="index">
+      <h3>{{ actor.identity }}</h3>
+      <h5 v-for="like in actor.likes" :key="like">{{ like }}</h5>
+    </div>
+    <hr style="border: 1px solid black;">
   </div>
 </template>
 
@@ -73,7 +80,22 @@
         },
         'num': 'l',
         'isDisplay': true,
-        'showelements': true
+        'showelements': true,
+        'lists': ['text', 'icon', 'font', 'lol'],
+        'fullnames': [
+          { first: 'a', last: 'b' },
+          { first: 'c', last: 'd' },
+          { first: 'e', last: 'f' },
+          { first: 'g', last: 'h' },
+          { first: 'i', last: 'j' }
+        ],
+        'actors': [
+          { identity: 'A', likes: ['a', 'b'] },
+          { identity: 'B', likes: ['c', 'd'] },
+          { identity: 'C', likes: ['e', 'f'] },
+          { identity: 'D', likes: ['g', 'h'] },
+          { identity: 'E', likes: ['i', 'j'] }
+        ]
       }
     },
   }
