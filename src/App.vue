@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>ep 8</h1>
+    <h1>ep 9</h1>
     <h2>{{ greet }}, {{ name }}! </h2>
     <p v-html="channel"></p>
     <p v-html="channel2"></p>
@@ -17,6 +17,14 @@
       'text-red': isDisabled,
       'text-green': show2class
     }">Object Conditional class - note the left side class has to be the css class</p>
+
+    <h2 :style="{
+      color: highlught,
+      fontSize : sizeoffont + 'px'
+    }">Working on inline style binding from data property</h2>
+
+    <h2 :style="styleObject">Using Styling Object</h2>
+    <h2 :style="[styleObject, specialFont]">Using Multiple Styling Object</h2>
   </div>
 </template>
 
@@ -38,7 +46,16 @@
         'secondclass': 'text-green',
         'show1class': true,
         'show2class': false,
-        'pomt': 'promoted'
+        'pomt': 'promoted',
+        'highlught': 'orange',
+        'sizeoffont': 50,
+        'styleObject': {
+          color: 'orange',
+          fontSize: '50px'
+        },
+        'specialFont': {
+          fontStyle: 'italic'
+        }
       }
     },
   }
