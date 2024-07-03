@@ -25,6 +25,17 @@
 
     <h2 :style="styleObject">Using Styling Object</h2>
     <h2 :style="[styleObject, specialFont]">Using Multiple Styling Object</h2>
+
+    <h1>Conditional Binding V-if, else, elseif and V-show episode 11</h1>
+    <h4 v-if="num===0">The Number is Zero</h4>
+    <h4 v-else-if="num > 0">The Number is Positive</h4>
+    <h4 v-else-if="num < 0">The Number is Negative</h4>
+    <h4 v-else>Not A Number</h4>
+    <template v-if="isDisplay">
+      <h4>lol</h4>
+      <h4>lo2X</h4>
+      <h4>lo553</h4>
+    </template>
   </div>
 </template>
 
@@ -55,7 +66,9 @@
         },
         'specialFont': {
           fontStyle: 'italic'
-        }
+        },
+        'num': 'l',
+        'isDisplay' : true,
       }
     },
   }
