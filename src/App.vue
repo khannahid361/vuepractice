@@ -36,6 +36,10 @@
       <h4>lo2X</h4>
       <h4>lo553</h4>
     </template>
+    <h1>episode 12 Vshow is used for toggling html</h1>
+      <h4 v-show="!showelements">pq</h4>
+      <h4>pe</h4>
+      <h4>llll</h4>
   </div>
 </template>
 
@@ -68,7 +72,8 @@
           fontStyle: 'italic'
         },
         'num': 'l',
-        'isDisplay' : true,
+        'isDisplay': true,
+        'showelements': true
       }
     },
   }
