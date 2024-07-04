@@ -46,6 +46,7 @@
       <h3>{{ actor.identity }}</h3>
       <h5 v-for="like in actor.likes" :key="like">{{ like }}</h5>
     </div>
+    <p v-for="(item, key, index) in balls" :key="index">{{ key }} - {{ item }} - {{ index }}</p>
     <hr style="border: 1px solid black;">
   </div>
 </template>
@@ -95,7 +96,12 @@
           { identity: 'C', likes: ['e', 'f'] },
           { identity: 'D', likes: ['g', 'h'] },
           { identity: 'E', likes: ['i', 'j'] }
-        ]
+        ],
+        'balls': {
+          name: 'tennis',
+          color: 'green',
+          bat: 'racket'
+        }
       }
     },
   }
