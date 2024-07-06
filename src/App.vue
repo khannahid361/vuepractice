@@ -57,6 +57,15 @@
     <h5>The Value Of 10, 20, 30 Addition is {{ add(10,20,30) }}</h5>
     <h5>The Value Of 5 X 10 = {{ multiplyBy10(5) }}</h5>
     <hr style="border: 2px solid black;">
+    <h1>Episode 17 Event Handling</h1>
+    <h2>{{ wife }}</h2>
+    <button v-on:click="wife = 'Naima'">Change Your wife</button>
+    <h2>{{ count }}</h2>
+    <button v-on:click="increment(1)">Increment - 1</button>
+    <button v-on:click="increment(5)">Increment - 5</button>
+    <button v-on:click="decrement(1)">Decrement - 1</button>
+    <button v-on:click="decrement(5)">Decrement - 5</button>
+    <hr style="border: 2px solid black;">
   </div>
 </template>
 
@@ -113,14 +122,22 @@
         },
         'friends': ['asad', 'hamza', 'alif'],
         'baseMultiplyer': 10,
+        'wife': 'Nahida',
+        'count': 0
       }
     },
     methods: {
       add(a, b, c) {
         return a + b + c;
       },
-      multiplyBy10(num){
+      multiplyBy10(num) {
         return num * this.baseMultiplyer;
+      },
+      increment(x) {
+        this.count += x;
+      },
+      decrement(y) {
+        this.count -= y;
       }
     },
   }
