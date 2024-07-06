@@ -52,6 +52,11 @@
     <template v-for="friend in friends" :key="friend">
       <h3 v-if="friend === 'alif'">{{ friend }}</h3>
     </template>
+    <hr style="border: 2px solid black;">
+    <h1>Episode 16 Event Handling</h1>
+    <h5>The Value Of 10, 20, 30 Addition is {{ add(10,20,30) }}</h5>
+    <h5>The Value Of 5 X 10 = {{ multiplyBy10(5) }}</h5>
+    <hr style="border: 2px solid black;">
   </div>
 </template>
 
@@ -106,7 +111,16 @@
           color: 'green',
           bat: 'racket'
         },
-        'friends': ['asad', 'hamza', 'alif']
+        'friends': ['asad', 'hamza', 'alif'],
+        'baseMultiplyer': 10,
+      }
+    },
+    methods: {
+      add(a, b, c) {
+        return a + b + c;
+      },
+      multiplyBy10(num){
+        return num * this.baseMultiplyer;
       }
     },
   }
