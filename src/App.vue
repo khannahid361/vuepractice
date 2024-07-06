@@ -47,7 +47,11 @@
       <h5 v-for="like in actor.likes" :key="like">{{ like }}</h5>
     </div>
     <p v-for="(item, key, index) in balls" :key="index">{{ key }} - {{ item }} - {{ index }}</p>
-    <hr style="border: 1px solid black;">
+    <hr style="border: 2px solid black;">
+    <h1>Episode 15 Conditional List rendering</h1>
+    <template v-for="friend in friends" :key="friend">
+      <h3 v-if="friend === 'alif'">{{ friend }}</h3>
+    </template>
   </div>
 </template>
 
@@ -101,7 +105,8 @@
           name: 'tennis',
           color: 'green',
           bat: 'racket'
-        }
+        },
+        'friends': ['asad', 'hamza', 'alif']
       }
     },
   }
