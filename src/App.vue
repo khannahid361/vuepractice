@@ -66,6 +66,35 @@
     <button @click="decrement(1)">Decrement - 1</button>
     <button @click="decrement(5)">Decrement - 5</button>
     <hr style="border: 2px solid black;">
+    <h1>Episode 19 Form Handling part 1</h1>
+    <h2>{{ JSON.stringify(formValues, null, 2) }}</h2>
+    <form>
+      <div>
+        <label for="myName">Name</label>
+        <input type="text" name="myName" id="myName" v-model="formValues.myName">
+      </div>
+      <div>
+        <label for="profile">Profile Summary</label>
+        <textarea name="profile" id="profile" v-model="formValues.profileSummary"></textarea>
+      </div>
+      <div>
+        <label for="country">Country</label>
+        <select name="country" id="country" v-model="formValues.country">
+          <option value="">Please Select</option>
+          <option value="India">India</option>
+          <option value="Pakistan">Pakistan</option>
+          <option value="Bangladesh">Bangladesh</option>
+        </select>
+      </div>
+      <div>
+        <label for="job_location">Job Location</label>
+        <select name="job_location" id="job_location" multiple v-model="formValues.jobLocation">
+          <option value="India">India</option>
+          <option value="Pakistan">Pakistan</option>
+          <option value="Bangladesh">Bangladesh</option>
+        </select>
+      </div>
+    </form>
   </div>
 </template>
 
@@ -123,7 +152,13 @@
         'friends': ['asad', 'hamza', 'alif'],
         'baseMultiplyer': 10,
         'wife': 'Nahida',
-        'count': 0
+        'count': 0,
+        formValues: {
+          myName: '',
+          profileSummary: '',
+          country : '',
+          jobLocation : []
+        }
       }
     },
     methods: {
