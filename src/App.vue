@@ -68,7 +68,7 @@
     <hr style="border: 2px solid black;">
     <h1>Episode 19 Form Handling part 1</h1>
     <h2>{{ JSON.stringify(formValues, null, 2) }}</h2>
-    <form>
+    <form @submit="submitForm">
       <div>
         <label for="myName">Name</label>
         <input type="text" name="myName" id="myName" v-model="formValues.myName">
@@ -101,7 +101,7 @@
         <label for="remote_job">Open To Work</label>
       </div>
       <div>
-        <label>My skills</label>
+        <label>My skills checkbox</label>
         <br>
         <input type="checkbox" value="html" id="html" v-model="formValues.skills">
         <label for="html">Html</label>
@@ -111,6 +111,21 @@
         <label for="php">Php</label>
         <input type="checkbox" value="js" id="js" v-model="formValues.skills">
         <label for="js">Js</label>
+      </div>
+      <div>
+        <label>My Experience</label>
+        <br>
+        <input type="radio" value="0-2" id="0-2" v-model="formValues.yearsOfExperience">
+        <label for="0-2">0-2</label>
+        <input type="radio" value="3-5" id="3-5" v-model="formValues.yearsOfExperience">
+        <label for="3-5">3-5</label>
+        <input type="radio" value="6-8" id="6-8" v-model="formValues.yearsOfExperience">
+        <label for="6-8">6-8</label>
+        <input type="radio" value="9-10" id="9-10" v-model="formValues.yearsOfExperience">
+        <label for="9-10">9-10</label>
+      </div>
+      <div>
+        <button>Submit</button>
       </div>
     </form>
   </div>
@@ -177,7 +192,8 @@
           country: '',
           jobLocation: [],
           remoteWork: false,
-          skills: []
+          skills: [],
+          yearsOfExperience: '',
         },
       }
     },
@@ -193,6 +209,11 @@
       },
       decrement(y) {
         this.count -= y;
+      },
+      submitForm(event)
+      {
+        event.preventDefault();
+        console.log('form values', this.formValues);
       }
     },
   }
