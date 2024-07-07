@@ -94,6 +94,24 @@
           <option value="Bangladesh">Bangladesh</option>
         </select>
       </div>
+      <hr style="border: 2px solid black;">
+      <h1>Episode 20 Form handling Part 2</h1>
+      <div>
+        <input type="checkbox" name="remote_job" id="remote_job" v-model="formValues.remoteWork">
+        <label for="remote_job">Open To Work</label>
+      </div>
+      <div>
+        <label>My skills</label>
+        <br>
+        <input type="checkbox" value="html" id="html" v-model="formValues.skills">
+        <label for="html">Html</label>
+        <input type="checkbox" value="css" id="css" v-model="formValues.skills">
+        <label for="css">Css</label>
+        <input type="checkbox" value="php" id="php" v-model="formValues.skills">
+        <label for="php">Php</label>
+        <input type="checkbox" value="js" id="js" v-model="formValues.skills">
+        <label for="js">Js</label>
+      </div>
     </form>
   </div>
 </template>
@@ -156,9 +174,11 @@
         formValues: {
           myName: '',
           profileSummary: '',
-          country : '',
-          jobLocation : []
-        }
+          country: '',
+          jobLocation: [],
+          remoteWork: false,
+          skills: []
+        },
       }
     },
     methods: {
