@@ -68,7 +68,7 @@
     <hr style="border: 2px solid black;">
     <h1>Episode 19 Form Handling part 1</h1>
     <h2>{{ JSON.stringify(formValues, null, 2) }}</h2>
-    <form @submit="submitForm">
+    <form @submit.prevent="submitForm">
       <div>
         <label for="myName">Name</label>
         <input type="text" name="myName" id="myName" v-model="formValues.myName">
@@ -124,9 +124,24 @@
         <input type="radio" value="9-10" id="9-10" v-model="formValues.yearsOfExperience">
         <label for="9-10">9-10</label>
       </div>
+      <hr style="border: 2px solid black;">
+      <h1>Episode 21 Modifiers</h1>
       <div>
-        <button>Submit</button>
+        <label for="college">College here setting up trimming modifier</label>
+        <input type="text" name="" id="college" v-model.trim="formValues.college">
       </div>
+      <div>
+        <label for="age">Age here setting up number modifier</label>
+        <input type="number" name="" id="age" v-model.number="formValues.age">
+      </div>
+      <div>
+        <label for="university">Age here setting up lazy modifier</label>
+        <input @keyup.enter="submitForm" type="text" name="" id="university" v-model.lazy="formValues.university">
+      </div>
+      <hr style="border: 2px solid black;">
+      <!-- <div>
+        <button>Submit</button>
+      </div> -->
     </form>
   </div>
 </template>
@@ -194,6 +209,9 @@
           remoteWork: false,
           skills: [],
           yearsOfExperience: '',
+          college : '',
+          age : null,
+          university : ''
         },
       }
     },
@@ -210,9 +228,8 @@
       decrement(y) {
         this.count -= y;
       },
-      submitForm(event)
+      submitForm()
       {
-        event.preventDefault();
         console.log('form values', this.formValues);
       }
     },
