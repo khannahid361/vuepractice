@@ -139,6 +139,15 @@
         <input @keyup.enter="submitForm" type="text" name="" id="university" v-model.lazy="formValues.university">
       </div>
       <hr style="border: 2px solid black;">
+      <h1>Episode 23 Computed Property</h1>
+      <p>Computed properties are like data properties, except they depend on other properties. <br>
+
+        Computed properties are written like methods, but they do not accept any input arguments. <br>
+        
+        Computed properties are updated automatically when a dependency changes, while methods are called on when something happens, like with event handling for example. <br>
+        
+        Computed properties are used when outputting something that depends on something else.</p>
+        <h2>The Value Of Movie Tickets - {{ getTotal }}</h2>
       <!-- <div>
         <button>Submit</button>
       </div> -->
@@ -213,6 +222,24 @@
           age : null,
           university : ''
         },
+        movies: 
+        [
+          {
+            id : 1,
+            name : 'Shawshank Redemption',
+            ticketPrice : 100
+          },
+          {
+            id : 2,
+            name : 'Katalaga',
+            ticketPrice : 200
+          },
+          {
+            id : 3,
+            name : 'Girlfriend Er Biya',
+            ticketPrice : 300
+          }
+        ]
       }
     },
     methods: {
@@ -233,6 +260,13 @@
         console.log('form values', this.formValues);
       }
     },
+    computed:
+    {
+      getTotal()
+      {
+        return this.movies.reduce((total, curr) => (total = total + curr.ticketPrice), 0)
+      }
+    }
   }
 </script>
 
