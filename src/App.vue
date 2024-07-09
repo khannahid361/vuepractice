@@ -141,13 +141,17 @@
       <hr style="border: 2px solid black;">
       <h1>Episode 23 Computed Property</h1>
       <p>Computed properties are like data properties, except they depend on other properties. <br>
-
+        
         Computed properties are written like methods, but they do not accept any input arguments. <br>
         
         Computed properties are updated automatically when a dependency changes, while methods are called on when something happens, like with event handling for example. <br>
         
         Computed properties are used when outputting something that depends on something else.</p>
         <h2>The Value Of Movie Tickets - {{ getTotal }}</h2>
+        <hr style="border: 2px solid black;">
+        <h1>Episode 25 Computed Property and filter function</h1>
+        <h3 v-for="movie in costlyMovies" :key="movie.id">{{ movie.name }} - {{ movie.ticketPrice }}</h3>
+        <hr style="border: 2px solid black;">
       <!-- <div>
         <button>Submit</button>
       </div> -->
@@ -265,6 +269,10 @@
       getTotal()
       {
         return this.movies.reduce((total, curr) => (total = total + curr.ticketPrice), 0)
+      },
+      costlyMovies()
+      {
+        return this.movies.filter((movie) => movie.ticketPrice > 100)
       }
     }
   }
