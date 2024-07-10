@@ -141,17 +141,21 @@
       <hr style="border: 2px solid black;">
       <h1>Episode 23 Computed Property</h1>
       <p>Computed properties are like data properties, except they depend on other properties. <br>
-        
+
         Computed properties are written like methods, but they do not accept any input arguments. <br>
-        
+
         Computed properties are updated automatically when a dependency changes, while methods are called on when something happens, like with event handling for example. <br>
-        
+
         Computed properties are used when outputting something that depends on something else.</p>
-        <h2>The Value Of Movie Tickets - {{ getTotal }}</h2>
-        <hr style="border: 2px solid black;">
-        <h1>Episode 25 Computed Property and filter function</h1>
-        <h3 v-for="movie in costlyMovies" :key="movie.id">{{ movie.name }} - {{ movie.ticketPrice }}</h3>
-        <hr style="border: 2px solid black;">
+      <h2>The Value Of Movie Tickets - {{ getTotal }}</h2>
+      <hr style="border: 2px solid black;">
+      <h1>Episode 25 Computed Property and filter function</h1>
+      <h3 v-for="movie in costlyMovies" :key="movie.id">{{ movie.name }} - {{ movie.ticketPrice }}</h3>
+      <hr style="border: 2px solid black;">
+      <h1>Episode 25 Computed Property Setter</h1>
+      <h2>{{ fetchName }}</h2>
+      <button @click="changeFullName()">Change Name</button>
+      <hr style="border: 2px solid black;">
       <!-- <div>
         <button>Submit</button>
       </div> -->
@@ -222,28 +226,30 @@
           remoteWork: false,
           skills: [],
           yearsOfExperience: '',
-          college : '',
-          age : null,
-          university : ''
+          college: '',
+          age: null,
+          university: ''
         },
-        movies: 
-        [
-          {
-            id : 1,
-            name : 'Shawshank Redemption',
-            ticketPrice : 100
-          },
-          {
-            id : 2,
-            name : 'Katalaga',
-            ticketPrice : 200
-          },
-          {
-            id : 3,
-            name : 'Girlfriend Er Biya',
-            ticketPrice : 300
-          }
-        ]
+        movies:
+          [
+            {
+              id: 1,
+              name: 'Shawshank Redemption',
+              ticketPrice: 100
+            },
+            {
+              id: 2,
+              name: 'Katalaga',
+              ticketPrice: 200
+            },
+            {
+              id: 3,
+              name: 'Girlfriend Er Biya',
+              ticketPrice: 300
+            }
+          ],
+        firstName: 'Kamrul',
+        lastName: 'Hasan'
       }
     },
     methods: {
@@ -259,20 +265,32 @@
       decrement(y) {
         this.count -= y;
       },
-      submitForm()
-      {
+      submitForm() {
         console.log('form values', this.formValues);
+      },
+      changeFullName()
+      {
+        this.fetchName = 'Super Boy'
       }
     },
     computed:
     {
-      getTotal()
-      {
+      getTotal() {
         return this.movies.reduce((total, curr) => (total = total + curr.ticketPrice), 0)
       },
-      costlyMovies()
-      {
+      costlyMovies() {
         return this.movies.filter((movie) => movie.ticketPrice > 100)
+      },
+      fetchName:
+      {
+        get() {
+          return ` ${this.firstName} - ${this.lastName}`
+        },
+        set(value) {
+          const nam = value.split(' ')
+          this.firstName = nam[0]
+          this.lastName = nam[1]
+        }
       }
     }
   }
