@@ -144,7 +144,8 @@
 
         Computed properties are written like methods, but they do not accept any input arguments. <br>
 
-        Computed properties are updated automatically when a dependency changes, while methods are called on when something happens, like with event handling for example. <br>
+        Computed properties are updated automatically when a dependency changes, while methods are called on when
+        something happens, like with event handling for example. <br>
 
         Computed properties are used when outputting something that depends on something else.</p>
       <h2>The Value Of Movie Tickets - {{ getTotal }}</h2>
@@ -155,6 +156,12 @@
       <h1>Episode 25 Computed Property Setter</h1>
       <h2>{{ fetchName }}</h2>
       <button @click="changeFullName()">Change Name</button>
+      <hr style="border: 2px solid black;">
+      <h1>Episode 27 Watchers</h1>
+      <h2>Current Volume</h2>
+      <h4>{{ volume }}</h4>
+      <button @click="volume+=5">+5</button>
+      <button @click="volume-=5">-5</button>
       <hr style="border: 2px solid black;">
       <!-- <div>
         <button>Submit</button>
@@ -249,7 +256,8 @@
             }
           ],
         firstName: 'Kamrul',
-        lastName: 'Hasan'
+        lastName: 'Hasan',
+        volume: 0,
       }
     },
     methods: {
@@ -268,8 +276,7 @@
       submitForm() {
         console.log('form values', this.formValues);
       },
-      changeFullName()
-      {
+      changeFullName() {
         this.fetchName = 'Super Boy'
       }
     },
@@ -291,6 +298,14 @@
           this.firstName = nam[0]
           this.lastName = nam[1]
         }
+      }
+    },
+    watch:
+    {
+      volume(newValue,oldValue) {
+          if (newValue > oldValue && newValue === 20) {
+            alert('Warning You are not allowed to listen to this high volume')
+          }
       }
     }
   }
