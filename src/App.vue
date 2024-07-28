@@ -163,6 +163,12 @@
       <button @click="volume+=5">+5</button>
       <button @click="volume-=5">-5</button>
       <hr style="border: 2px solid black;">
+      <h1>Episode 28 Intermediate and Deep Watcher</h1>
+      <input type="text" name="" id="" v-model="show">
+      <input type="text" name="" id="" v-model="showInfo.title">
+      <input type="text" name="" id="" v-model="showInfo.actor">
+      <button @click="showList.push('Superman')">Add Show</button>
+      <hr style="border: 2px solid black;">
       <!-- <div>
         <button>Submit</button>
       </div> -->
@@ -258,6 +264,12 @@
         firstName: 'Kamrul',
         lastName: 'Hasan',
         volume: 0,
+        show: 'Batman',
+        showInfo: {
+          title: '',
+          actor: '',
+        },
+        showList : ['Batman', 'Kamrul'],
       }
     },
     methods: {
@@ -302,11 +314,31 @@
     },
     watch:
     {
-      volume(newValue,oldValue) {
-          if (newValue > oldValue && newValue === 20) {
-            alert('Warning You are not allowed to listen to this high volume')
-          }
-      }
+      volume(newValue, oldValue) {
+        if (newValue > oldValue && newValue === 20) {
+          alert('Warning You are not allowed to listen to this high volume')
+        }
+      },
+      show: {
+        handler(newValue) {
+          console.log(`using show as object in the watcher so that we can fetch data calling an api on load with immediate  = ${newValue}`)
+        },
+        immediate: true,
+      },
+      showInfo:
+      {
+        handler(newValue) {
+          console.log(`calling an api with title  = ${newValue.title} and actor = ${newValue.actor} will not work untill setting it to deep to true`)
+        },
+        deep: true,
+      },
+      showList: 
+      {
+        handler(newValue){
+          console.log(`${newValue} we have to deep to true to see the value from adding by button`)
+        },
+        deep : true,
+      },
     }
   }
 </script>
