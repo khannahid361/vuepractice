@@ -173,13 +173,20 @@
         <button>Submit</button>
       </div> -->
     </form>
+    <GreetUser />
+    <SmartTool />
+    <hr style="border: 2px solid black;">
   </div>
 </template>
 
 <script>
-
+  import GreetUser from './components/GreetUser.vue'
+  import SmartTool from './components/SmartTool.vue'
   export default {
     name: 'App',
+    components:{
+      GreetUser, SmartTool
+    },
     data() {
       return {
         'name': 'Kamrul',
