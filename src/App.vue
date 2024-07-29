@@ -173,8 +173,11 @@
         <button>Submit</button>
       </div> -->
     </form>
-    <GreetUser />
-    <SmartTool />
+    <GreetUser foodName="Apple" heroName="Batman" />
+    <GreetUser foodName="Mango" heroName="Spiderman" />
+    <GreetUser foodName="Rice" heroName="SuperMan" />
+    <hr style="border: 2px solid black;">
+    <SmartTool :foodName="name" :heroName="channel2"/>
     <hr style="border: 2px solid black;">
   </div>
 </template>
