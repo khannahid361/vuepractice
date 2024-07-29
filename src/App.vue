@@ -179,16 +179,20 @@
     <hr style="border: 2px solid black;">
     <SmartTool :foodName="name" :heroName="channel2"/>
     <hr style="border: 2px solid black;">
+    <h1>Ep 31 Prop Types and validation means it will teach me how to define props with their types</h1>
+    <PropValidation title="Vue Practice" :numericalValue="31" />
+    <hr style="border: 2px solid black;">
   </div>
 </template>
 
 <script>
   import GreetUser from './components/GreetUser.vue'
   import SmartTool from './components/SmartTool.vue'
+  import PropValidation from './components/PropValidation.vue'
   export default {
     name: 'App',
     components:{
-      GreetUser, SmartTool
+      GreetUser, SmartTool, PropValidation
     },
     data() {
       return {
