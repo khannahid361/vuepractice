@@ -182,6 +182,9 @@
     <h1>Ep 31 Prop Types and validation means it will teach me how to define props with their types</h1>
     <PropValidation title="Vue Practice" :numericalValue="31" />
     <hr style="border: 2px solid black;">
+    <h1>Ep 32 - Non Prop Attributes defaultly bonds the root div but by inheritiing false we can make a element inside the root div of a component to apply only on that element</h1>
+    <NonPropProperty id="hunter" />
+    <hr style="border: 2px solid black;">
   </div>
 </template>
 
@@ -189,10 +192,11 @@
   import GreetUser from './components/GreetUser.vue'
   import SmartTool from './components/SmartTool.vue'
   import PropValidation from './components/PropValidation.vue'
+  import NonPropProperty from './components/NonPropProperty.vue'
   export default {
     name: 'App',
     components:{
-      GreetUser, SmartTool, PropValidation
+      GreetUser, SmartTool, PropValidation, NonPropProperty
     },
     data() {
       return {
