@@ -281,6 +281,10 @@
     <h1>Ep 33 - Provide and Inject</h1>
     <MasterComponent />
     <hr style="border: 2px solid black" />
+    <h1>Ep 34 - Component Events</h1>
+    <button @click="showPopUp = true">Show Pop Up</button>
+    <PopUp v-show="showPopUp" @close="closePopup" />
+    <hr style="border: 2px solid black" />
   </div>
 </template>
 
@@ -290,6 +294,7 @@ import SmartTool from "./components/SmartTool.vue";
 import PropValidation from "./components/PropValidation.vue";
 import NonPropProperty from "./components/NonPropProperty.vue";
 import MasterComponent from "./components/MasterComponent.vue";
+import PopUp from "./components/PopUp.vue";
 export default {
   name: "App",
   components: {
@@ -298,6 +303,7 @@ export default {
     PropValidation,
     NonPropProperty,
     MasterComponent,
+    PopUp
   },
   data() {
     return {
@@ -388,6 +394,7 @@ export default {
         actor: "",
       },
       showList: ["Batman", "Kamrul"],
+      showPopUp : false,
     };
   },
   methods: {
@@ -409,6 +416,10 @@ export default {
     changeFullName() {
       this.fetchName = "Super Boy";
     },
+    closePopup(xValue) {
+      this.showPopUp = false;
+      console.log('xValue: ' + xValue);
+    }
   },
   computed: {
     getTotal() {
