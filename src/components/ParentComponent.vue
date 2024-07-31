@@ -1,5 +1,6 @@
 <template>
   <div>
+    <h1 style="color: green;">This is the Parent Component</h1>
     <child-component />
   </div>
 </template>

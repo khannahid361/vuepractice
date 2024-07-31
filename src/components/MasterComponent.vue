@@ -1,5 +1,6 @@
 <template>
     <div>
+        <h1 style="color: blue;">This is the Grandfather Component</h1>
         <parent-component />
     </div>
 </template>
