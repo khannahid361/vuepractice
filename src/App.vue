@@ -289,6 +289,10 @@
     <button @click="showPopUp2 = true">Show Pop Up 2</button>
     <CustomEvent v-show="showPopUp2" @close="closePopup2" />
     <hr style="border: 2px solid black" />
+    <h1>Ep 36 - Components and v-model</h1>
+    <ComponentVmodel v-model="surName" />
+    <h2>{{ surName }}</h2>
+    <hr style="border: 2px solid black" />
   </div>
 </template>
 
@@ -300,6 +304,7 @@ import NonPropProperty from "./components/NonPropProperty.vue";
 import MasterComponent from "./components/MasterComponent.vue";
 import PopUp from "./components/PopUp.vue";
 import CustomEvent from "./components/CustomEvent.vue";
+import ComponentVmodel from "./components/ComponentVmodel.vue";
 export default {
   name: "App",
   components: {
@@ -309,7 +314,8 @@ export default {
     NonPropProperty,
     MasterComponent,
     PopUp,
-    CustomEvent
+    CustomEvent,
+    ComponentVmodel
   },
   data() {
     return {
@@ -402,6 +408,7 @@ export default {
       showList: ["Batman", "Kamrul"],
       showPopUp : false,
       showPopUp2 : false,
+      surName: ''
     };
   },
   methods: {
