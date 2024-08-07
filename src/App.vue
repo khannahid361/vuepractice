@@ -293,6 +293,16 @@
     <ComponentVmodel v-model="surName" />
     <h2>{{ surName }}</h2>
     <hr style="border: 2px solid black" />
+    <h1>Ep 37 - Slots</h1>
+    <CardComponent>
+      <h1>I have declared a slot</h1>
+    </CardComponent>
+    <CardComponent>
+      <textarea name="" id="">This is a slot input field</textarea>
+    </CardComponent>
+    <CardComponent></CardComponent>
+    <CardComponent>Slots in Vue.js are a powerful feature that allows you to pass content from a parent component to a child component. They enable you to create reusable and flexible components. Vue provides three types of slots: default slots, named slots, and scoped slots.</CardComponent>
+    <hr style="border: 2px solid black" />
   </div>
 </template>
 
@@ -305,6 +315,7 @@ import MasterComponent from "./components/MasterComponent.vue";
 import PopUp from "./components/PopUp.vue";
 import CustomEvent from "./components/CustomEvent.vue";
 import ComponentVmodel from "./components/ComponentVmodel.vue";
+import CardComponent from "./components/CardComponent.vue";
 export default {
   name: "App",
   components: {
@@ -315,7 +326,8 @@ export default {
     MasterComponent,
     PopUp,
     CustomEvent,
-    ComponentVmodel
+    ComponentVmodel,
+    CardComponent
   },
   data() {
     return {
