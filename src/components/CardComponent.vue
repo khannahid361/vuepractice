@@ -1,14 +1,13 @@
 <template>
   <div class="card">
   <div class="card-header">
-    Card Header
+    <slot name="header"></slot>
   </div>
   <div class="card-content">
-    <slot>Default Content</slot>
+    <slot></slot>
   </div>
   <div class="card-footer">
-    <button class="btn">Action 1</button>
-    <button class="btn">Action 2</button>
+    <slot name="footer"></slot>
   </div>
 </div>
 </template>

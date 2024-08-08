@@ -303,6 +303,19 @@
     <CardComponent></CardComponent>
     <CardComponent>Slots in Vue.js are a powerful feature that allows you to pass content from a parent component to a child component. They enable you to create reusable and flexible components. Vue provides three types of slots: default slots, named slots, and scoped slots.</CardComponent>
     <hr style="border: 2px solid black" />
+    <h1>Ep 38 Named Slot</h1>
+    <CardComponent>
+      <template v-slot:header>
+        <h1 style="color: red;">V-sloat:header - First Sloat Header</h1>
+      </template>
+      <template v-slot:default>
+        <h1 style="color:green">V-sloat:default - First Sloat default / Content</h1>
+      </template>
+      <template v-slot:footer>
+        <h1 style="color:blue">V-sloat:footer - First Sloat footer</h1>
+      </template>
+    </CardComponent>
+    <hr style="border: 2px solid black" />
   </div>
 </template>
 
