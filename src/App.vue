@@ -316,6 +316,24 @@
       </template>
     </CardComponent>
     <hr style="border: 2px solid black" />
+    <h1>Ep 39 Sloat Props</h1>
+    <NameList>
+      <template v-slot:default="slotProps">
+        {{ slotProps.firstName }} {{ slotProps.lastName }}
+      </template>
+    </NameList>
+    <NameList>
+      <template v-slot:default="slotProps">
+        {{ slotProps.lastName }} {{ slotProps.firstName }}
+      </template>
+    </NameList>
+    <NameList>
+      <template v-slot:default="slotProps">
+        {{ slotProps.firstName }}
+      </template>
+    </NameList>
+    <h2 style="color:red"></h2>
+    <hr style="border: 2px solid black" />
   </div>
 </template>
 
@@ -329,6 +347,7 @@ import PopUp from "./components/PopUp.vue";
 import CustomEvent from "./components/CustomEvent.vue";
 import ComponentVmodel from "./components/ComponentVmodel.vue";
 import CardComponent from "./components/CardComponent.vue";
+import NameList from "./components/NameList.vue";
 export default {
   name: "App",
   components: {
@@ -340,7 +359,8 @@ export default {
     PopUp,
     CustomEvent,
     ComponentVmodel,
-    CardComponent
+    CardComponent,
+    NameList
   },
   data() {
     return {
