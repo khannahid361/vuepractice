@@ -338,6 +338,11 @@
     <h4>App Component Text</h4>
     <ChildStyles/>
     <hr style="border: 2px solid black" />
+    <h1>Ep 41 - Dynamic Components</h1>
+    <TabA></TabA>
+    <TabB></TabB>
+    <TabC></TabC>
+    <hr style="border: 2px solid black" />
   </div>
 </template>
 
@@ -353,6 +358,9 @@ import ComponentVmodel from "./components/ComponentVmodel.vue";
 import CardComponent from "./components/CardComponent.vue";
 import NameList from "./components/NameList.vue";
 import ChildStyles from "./components/ChildStyles.vue";
+import TabA from "./components/TabA.vue";
+import TabB from "./components/TabB.vue";
+import TabC from "./components/TabC.vue";
 export default {
   name: "App",
   components: {
@@ -366,7 +374,10 @@ export default {
     ComponentVmodel,
     CardComponent,
     NameList,
-    ChildStyles
+    ChildStyles,
+    TabA,
+    TabB,
+    TabC
   },
   data() {
     return {
