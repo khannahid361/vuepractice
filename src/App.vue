@@ -346,7 +346,11 @@
     <TabB v-if="activeTab==='TabB'"></TabB>
     <TabC v-if="activeTab==='TabC'"></TabC>
     <h3>I can do it with Dynamic Component watch the app component</h3>
-    <component :is="activeTab"></component>
+    <h1>EP- 42 - Keeping Dynamic Components Alive</h1>
+    <keep-alive>
+      <component :is="activeTab"></component>
+    </keep-alive>
+    <hr style="border: 2px solid black" />
     <hr style="border: 2px solid black" />
   </div>
 </template>
