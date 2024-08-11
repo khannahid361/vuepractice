@@ -339,9 +339,14 @@
     <ChildStyles/>
     <hr style="border: 2px solid black" />
     <h1>Ep 41 - Dynamic Components</h1>
-    <TabA></TabA>
-    <TabB></TabB>
-    <TabC></TabC>
+    <button @click="activeTab='TabA'">Tab A</button>
+    <button @click="activeTab='TabB'">Tab B</button>
+    <button @click="activeTab='TabC'">Tab C</button>
+    <TabA v-if="activeTab==='TabA'"></TabA>
+    <TabB v-if="activeTab==='TabB'"></TabB>
+    <TabC v-if="activeTab==='TabC'"></TabC>
+    <h3>I can do it with Dynamic Component watch the app component</h3>
+    <component :is="activeTab"></component>
     <hr style="border: 2px solid black" />
   </div>
 </template>
@@ -381,6 +386,7 @@ export default {
   },
   data() {
     return {
+      activeTab : 'TabA',
       name: "Kamrul",
       greet: "Hello",
       channel: "<b>CodeEvolution</b>",
