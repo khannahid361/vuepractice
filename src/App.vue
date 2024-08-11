@@ -334,6 +334,10 @@
     </NameList>
     <h2 style="color:red"></h2>
     <hr style="border: 2px solid black" />
+    <h1>Ep 40 - Component Styles</h1>
+    <h4>App Component Text</h4>
+    <ChildStyles/>
+    <hr style="border: 2px solid black" />
   </div>
 </template>
 
@@ -348,6 +352,7 @@ import CustomEvent from "./components/CustomEvent.vue";
 import ComponentVmodel from "./components/ComponentVmodel.vue";
 import CardComponent from "./components/CardComponent.vue";
 import NameList from "./components/NameList.vue";
+import ChildStyles from "./components/ChildStyles.vue";
 export default {
   name: "App",
   components: {
@@ -360,7 +365,8 @@ export default {
     CustomEvent,
     ComponentVmodel,
     CardComponent,
-    NameList
+    NameList,
+    ChildStyles
   },
   data() {
     return {
@@ -562,5 +568,9 @@ export default {
 
 .promoted {
   font-style: italic;
+}
+
+h4 {
+  color: orange;
 }
 </style>
