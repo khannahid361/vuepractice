@@ -379,6 +379,7 @@ import TabB from "./components/TabB.vue";
 import TabC from "./components/TabC.vue";
 import PortalRoot from "./components/PortalRoot.vue";
 import PostList from "./components/PostList.vue";
+import CreatePost from "./components/CreatePost.vue";
 export default {
   name: "App",
   components: {
@@ -397,7 +398,8 @@ export default {
     TabB,
     TabC,
     PortalRoot,
-    PostList
+    PostList,
+    CreatePost
   },
   data() {
     return {
