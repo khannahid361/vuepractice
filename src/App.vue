@@ -356,6 +356,9 @@
       <PortalRoot></PortalRoot>
     </teleport>
     <hr style="border: 2px solid black" />
+    <h1>Ep 45 - HTTP GET Request</h1>
+    <PostList/>
+    <hr style="border: 2px solid black" />
   </div>
 </template>
 
@@ -375,6 +378,7 @@ import TabA from "./components/TabA.vue";
 import TabB from "./components/TabB.vue";
 import TabC from "./components/TabC.vue";
 import PortalRoot from "./components/PortalRoot.vue";
+import PostList from "./components/PostList.vue";
 export default {
   name: "App",
   components: {
@@ -392,7 +396,8 @@ export default {
     TabA,
     TabB,
     TabC,
-    PortalRoot
+    PortalRoot,
+    PostList
   },
   data() {
     return {
