@@ -359,6 +359,9 @@
     <h1>Ep 45 - HTTP GET Request</h1>
     <PostList/>
     <hr style="border: 2px solid black" />
+    <h1>Ep 46 - HTTP POST Request</h1>
+    <CreatePost />
+    <hr style="border: 2px solid black" />
   </div>
 </template>
 
