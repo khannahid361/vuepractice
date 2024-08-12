@@ -351,6 +351,10 @@
       <component :is="activeTab"></component>
     </keep-alive>
     <hr style="border: 2px solid black" />
+    <h1>Ep 43 - Teleport Component</h1>
+    <teleport to='#portalRoot' >
+      <PortalRoot></PortalRoot>
+    </teleport>
     <hr style="border: 2px solid black" />
   </div>
 </template>
@@ -370,6 +374,7 @@ import ChildStyles from "./components/ChildStyles.vue";
 import TabA from "./components/TabA.vue";
 import TabB from "./components/TabB.vue";
 import TabC from "./components/TabC.vue";
+import PortalRoot from "./components/PortalRoot.vue";
 export default {
   name: "App",
   components: {
@@ -386,7 +391,8 @@ export default {
     ChildStyles,
     TabA,
     TabB,
-    TabC
+    TabC,
+    PortalRoot
   },
   data() {
     return {
