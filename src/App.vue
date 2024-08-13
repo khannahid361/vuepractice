@@ -369,6 +369,9 @@
     <h1>Ep  48 - GET Request on Page Load</h1>
     <RequestOnLoad />
     <hr style="border: 2px solid black" />
+    <h1>Ep 49 - Template Refs</h1>
+    <TemplateRef />
+    <hr style="border: 2px solid black" />
   </div>
 </template>
 
@@ -393,6 +396,7 @@ import CreatePost from "./components/CreatePost.vue";
 import UpdatePost from "./components/UpdatePost.vue";
 import DeletePost from "./components/DeletePost.vue";
 import RequestOnLoad from "./components/RequestOnLoad.vue";
+import TemplateRef from "./components/TemplateRef.vue";
 export default {
   name: "App",
   components: {
@@ -415,7 +419,8 @@ export default {
     CreatePost,
     UpdatePost,
     DeletePost,
-    RequestOnLoad
+    RequestOnLoad,
+    TemplateRef
   },
   data() {
     return {
