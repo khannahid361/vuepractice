@@ -362,6 +362,9 @@
     <h1>Ep 46 - HTTP POST Request</h1>
     <CreatePost />
     <hr style="border: 2px solid black" />
+    <UpdatePost />
+    <hr style="border: 2px solid black" />
+    <DeletePost />
   </div>
 </template>
 
@@ -383,6 +386,8 @@ import TabC from "./components/TabC.vue";
 import PortalRoot from "./components/PortalRoot.vue";
 import PostList from "./components/PostList.vue";
 import CreatePost from "./components/CreatePost.vue";
+import UpdatePost from "./components/UpdatePost.vue";
+import DeletePost from "./components/DeletePost.vue";
 export default {
   name: "App",
   components: {
@@ -402,7 +407,9 @@ export default {
     TabC,
     PortalRoot,
     PostList,
-    CreatePost
+    CreatePost,
+    UpdatePost,
+    DeletePost
   },
   data() {
     return {
