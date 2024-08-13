@@ -365,6 +365,9 @@
     <UpdatePost />
     <hr style="border: 2px solid black" />
     <DeletePost />
+    <hr style="border: 2px solid black" />
+    <h1>Ep  47 - Lifecycle Hooks</h1>
+    <hr style="border: 2px solid black" />
   </div>
 </template>
 
