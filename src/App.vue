@@ -366,7 +366,8 @@
     <hr style="border: 2px solid black" />
     <DeletePost />
     <hr style="border: 2px solid black" />
-    <h1>Ep  47 - Lifecycle Hooks</h1>
+    <h1>Ep  48 - GET Request on Page Load</h1>
+    <RequestOnLoad />
     <hr style="border: 2px solid black" />
   </div>
 </template>
@@ -391,6 +392,7 @@ import PostList from "./components/PostList.vue";
 import CreatePost from "./components/CreatePost.vue";
 import UpdatePost from "./components/UpdatePost.vue";
 import DeletePost from "./components/DeletePost.vue";
+import RequestOnLoad from "./components/RequestOnLoad.vue";
 export default {
   name: "App",
   components: {
@@ -412,7 +414,8 @@ export default {
     PostList,
     CreatePost,
     UpdatePost,
-    DeletePost
+    DeletePost,
+    RequestOnLoad
   },
   data() {
     return {
