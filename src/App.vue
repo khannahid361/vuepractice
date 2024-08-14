@@ -372,6 +372,12 @@
     <h1>Ep 49 - Template Refs</h1>
     <TemplateRef />
     <hr style="border: 2px solid black" />
+    <h1>Ep 50 Reusability with Mixins</h1>
+    <ClickCounter />
+    <hr style="border: 2px solid black" />
+    <HoverCounter />
+    <h2 class="text-red">We used mixins here for the purpose of reuseability of same code in Clickcounter and Hovercounter Component</h2>
+    <hr style="border: 2px solid black" />
   </div>
 </template>
 
@@ -397,6 +403,8 @@ import UpdatePost from "./components/UpdatePost.vue";
 import DeletePost from "./components/DeletePost.vue";
 import RequestOnLoad from "./components/RequestOnLoad.vue";
 import TemplateRef from "./components/TemplateRef.vue";
+import ClickCounter from "./components/ClickCounter.vue";
+import HoverCounter from "./components/HoverCounter.vue";
 export default {
   name: "App",
   components: {
@@ -420,7 +428,9 @@ export default {
     UpdatePost,
     DeletePost,
     RequestOnLoad,
-    TemplateRef
+    TemplateRef,
+    ClickCounter,
+    HoverCounter
   },
   data() {
     return {
