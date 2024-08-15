@@ -378,6 +378,9 @@
     <HoverCounter />
     <h2 class="text-red">We used mixins here for the purpose of reuseability of same code in Clickcounter and Hovercounter Component</h2>
     <hr style="border: 2px solid black" />
+    <h1>Ep 52 - Replacing data with ref</h1>
+    <ChangeData />
+    <hr style="border: 2px solid black" />
   </div>
 </template>
 
@@ -405,6 +408,7 @@ import RequestOnLoad from "./components/RequestOnLoad.vue";
 import TemplateRef from "./components/TemplateRef.vue";
 import ClickCounter from "./components/ClickCounter.vue";
 import HoverCounter from "./components/HoverCounter.vue";
+import ChangeData from "./components/ChangeData.vue";
 export default {
   name: "App",
   components: {
@@ -430,7 +434,8 @@ export default {
     RequestOnLoad,
     TemplateRef,
     ClickCounter,
-    HoverCounter
+    HoverCounter,
+    ChangeData
   },
   data() {
     return {
