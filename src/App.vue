@@ -381,6 +381,11 @@
     <h1>Ep 52 - Replacing data with ref</h1>
     <ChangeData />
     <hr style="border: 2px solid black" />
+    <h1>Ep 54 - Reactivity and toRefs</h1>
+    <DemoOne />
+    <hr style="border: 2px solid black" />
+    <DemoTwo />
+    <hr style="border: 2px solid black" />
   </div>
 </template>
 
@@ -409,6 +414,8 @@ import TemplateRef from "./components/TemplateRef.vue";
 import ClickCounter from "./components/ClickCounter.vue";
 import HoverCounter from "./components/HoverCounter.vue";
 import ChangeData from "./components/ChangeData.vue";
+import DemoOne from "./components/DemoOne.vue";
+import DemoTwo from "./components/DemoTwo.vue";
 export default {
   name: "App",
   components: {
@@ -435,7 +442,9 @@ export default {
     TemplateRef,
     ClickCounter,
     HoverCounter,
-    ChangeData
+    ChangeData,
+    DemoOne,
+    DemoTwo
   },
   data() {
     return {
