@@ -386,6 +386,9 @@
     <hr style="border: 2px solid black" />
     <DemoTwo />
     <hr style="border: 2px solid black" />
+    <h1>EP 55 - Replacing methods</h1>
+    <ChangeMethod />
+    <hr style="border: 2px solid black" />
   </div>
 </template>
 
@@ -416,6 +419,7 @@ import HoverCounter from "./components/HoverCounter.vue";
 import ChangeData from "./components/ChangeData.vue";
 import DemoOne from "./components/DemoOne.vue";
 import DemoTwo from "./components/DemoTwo.vue";
+import ChangeMethod from "./components/ChangeMethod.vue";
 export default {
   name: "App",
   components: {
@@ -444,7 +448,8 @@ export default {
     HoverCounter,
     ChangeData,
     DemoOne,
-    DemoTwo
+    DemoTwo,
+    ChangeMethod
   },
   data() {
     return {
