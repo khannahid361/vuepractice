@@ -389,6 +389,9 @@
     <h1>EP 55 - Replacing methods</h1>
     <ChangeMethod />
     <hr style="border: 2px solid black" />
+    <h1>Ep 56 - v-model and Composition API</h1>
+    <CompositionVmodel />
+    <hr style="border: 2px solid black" />
   </div>
 </template>
 
@@ -420,6 +423,7 @@ import ChangeData from "./components/ChangeData.vue";
 import DemoOne from "./components/DemoOne.vue";
 import DemoTwo from "./components/DemoTwo.vue";
 import ChangeMethod from "./components/ChangeMethod.vue";
+import CompositionVmodel from "./components/CompositionVmodel.vue";
 export default {
   name: "App",
   components: {
@@ -449,7 +453,8 @@ export default {
     ChangeData,
     DemoOne,
     DemoTwo,
-    ChangeMethod
+    ChangeMethod,
+    CompositionVmodel
   },
   data() {
     return {
