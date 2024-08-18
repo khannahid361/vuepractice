@@ -3,18 +3,27 @@
     <input type="text" v-model="name" name="" id="" />
     <br>
     <br>
-    <h1>Replacing Watcher to Composition Api Watcher</h1>
+    <h1 class="text-red">Replacing Watcher to Composition Api Watcher</h1>
     <br>
     <br>
     <input type="text" v-model="firstName" name="" id="" />
     <br>
     <br>
     <input type="text" v-model="lastName" name="" id="" />
+    <br>
+    <br>
+    <h1 class="text-red">Replacing Watcher to Composition Api Watcher</h1>
+    <br>
+    <br>
+    <input type="text" v-model="fname" name="" id="" />
+    <br>
+    <br>
+    <input type="text" v-model="lname" name="" id="" />
   </div>
 </template>
 
 <script>
-import { ref, watch } from 'vue';
+import { ref, watch, reactive, toRefs } from 'vue';
 
     export default {
         name : 'ReaplaceWatcher',
@@ -29,9 +38,23 @@ import { ref, watch } from 'vue';
             }, {
                 immediate: true
             })
+
+            const state = reactive({
+                fname : '',
+                lname: ''
+            })
+            watch(() => {
+                return {...state}
+            }, (newValue, oldValue) => {
+                console.log(`First Name New value : ${newValue.fname}`);
+                console.log(`First Name old value : ${oldValue.fname}`);
+                console.log(`Last Name New value : ${newValue.lname}`);
+                console.log(`Last Name old value : ${oldValue.lname}`);
+            })
             return {
                 firstName,
-                lastName
+                lastName,
+                ...toRefs(state)
             }
         },
         data() {
