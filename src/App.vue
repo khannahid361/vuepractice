@@ -395,6 +395,9 @@
     <h1 class="text-red">Ep 57 - Replacing Computed Properties</h1>
     <ChangeComputed />
     <hr style="border: 2px solid black" />
+    <h1 class="text-red">Ep 58 - Replacing Watchers (Part 1)</h1>
+    <ReplaceWatcher />
+    <hr style="border: 2px solid black" />
   </div>
 </template>
 
@@ -428,6 +431,7 @@ import DemoTwo from "./components/DemoTwo.vue";
 import ChangeMethod from "./components/ChangeMethod.vue";
 import CompositionVmodel from "./components/CompositionVmodel.vue";
 import ChangeComputed from "./components/ChangeComputed.vue";
+import ReplaceWatcher from "./components/ReplaceWatcher.vue";
 export default {
   name: "App",
   components: {
@@ -459,7 +463,8 @@ export default {
     DemoTwo,
     ChangeMethod,
     CompositionVmodel,
-    ChangeComputed
+    ChangeComputed,
+    ReplaceWatcher
   },
   data() {
     return {
