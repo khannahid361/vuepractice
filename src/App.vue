@@ -398,6 +398,8 @@
     <h1 class="text-red">Ep 58 - Replacing Watchers (Part 1)</h1>
     <ReplaceWatcher />
     <hr style="border: 2px solid black" />
+    <h1>Ep 60 - Replacing Provide/Inject</h1>
+    <hr style="border: 2px solid black" />
   </div>
 </template>
 
@@ -432,6 +434,7 @@ import ChangeMethod from "./components/ChangeMethod.vue";
 import CompositionVmodel from "./components/CompositionVmodel.vue";
 import ChangeComputed from "./components/ChangeComputed.vue";
 import ReplaceWatcher from "./components/ReplaceWatcher.vue";
+import ReplaceProvideInject from "./components/ReplaceProvideInject.vue";
 export default {
   name: "App",
   components: {
@@ -464,7 +467,8 @@ export default {
     ChangeMethod,
     CompositionVmodel,
     ChangeComputed,
-    ReplaceWatcher
+    ReplaceWatcher,
+    ReplaceProvideInject
   },
   data() {
     return {
