@@ -399,6 +399,7 @@
     <ReplaceWatcher />
     <hr style="border: 2px solid black" />
     <h1>Ep 60 - Replacing Provide/Inject</h1>
+    <ReplaceProvideInject />
     <hr style="border: 2px solid black" />
   </div>
 </template>
