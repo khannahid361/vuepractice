@@ -392,6 +392,9 @@
     <h1>Ep 56 - v-model and Composition API</h1>
     <CompositionVmodel />
     <hr style="border: 2px solid black" />
+    <h1 class="text-red">Ep 57 - Replacing Computed Properties</h1>
+    <ChangeComputed />
+    <hr style="border: 2px solid black" />
   </div>
 </template>
 
@@ -424,6 +427,7 @@ import DemoOne from "./components/DemoOne.vue";
 import DemoTwo from "./components/DemoTwo.vue";
 import ChangeMethod from "./components/ChangeMethod.vue";
 import CompositionVmodel from "./components/CompositionVmodel.vue";
+import ChangeComputed from "./components/ChangeComputed.vue";
 export default {
   name: "App",
   components: {
@@ -454,7 +458,8 @@ export default {
     DemoOne,
     DemoTwo,
     ChangeMethod,
-    CompositionVmodel
+    CompositionVmodel,
+    ChangeComputed
   },
   data() {
     return {
