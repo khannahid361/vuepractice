@@ -401,6 +401,9 @@
     <h1>Ep 60 - Replacing Provide/Inject</h1>
     <ReplaceProvideInject />
     <hr style="border: 2px solid black" />
+    <h1>Ep 62 - Template Refs and Composition API</h1>
+    <ReplaceTemplateRefs />
+    <hr style="border: 2px solid black" />
   </div>
 </template>
 
@@ -436,6 +439,7 @@ import CompositionVmodel from "./components/CompositionVmodel.vue";
 import ChangeComputed from "./components/ChangeComputed.vue";
 import ReplaceWatcher from "./components/ReplaceWatcher.vue";
 import ReplaceProvideInject from "./components/ReplaceProvideInject.vue";
+import ReplaceTemplateRefs from "./components/ReplaceTemplateRefs.vue";
 export default {
   name: "App",
   components: {
@@ -469,7 +473,8 @@ export default {
     CompositionVmodel,
     ChangeComputed,
     ReplaceWatcher,
-    ReplaceProvideInject
+    ReplaceProvideInject,
+    ReplaceTemplateRefs
   },
   data() {
     return {
