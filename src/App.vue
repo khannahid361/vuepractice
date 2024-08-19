@@ -404,6 +404,11 @@
     <h1>Ep 62 - Template Refs and Composition API</h1>
     <ReplaceTemplateRefs />
     <hr style="border: 2px solid black" />
+    <h1>Ep 63 - Props and Composition API</h1>
+    <ManagePerson />
+    <hr style="border: 2px solid black" />
+    <h1>EP 64 - Custom Events and Composition API</h1>
+    <hr style="border: 2px solid black" />
   </div>
 </template>
 
@@ -440,6 +445,7 @@ import ChangeComputed from "./components/ChangeComputed.vue";
 import ReplaceWatcher from "./components/ReplaceWatcher.vue";
 import ReplaceProvideInject from "./components/ReplaceProvideInject.vue";
 import ReplaceTemplateRefs from "./components/ReplaceTemplateRefs.vue";
+import ManagePerson from "./components/ManagePerson.vue";
 export default {
   name: "App",
   components: {
@@ -474,7 +480,8 @@ export default {
     ChangeComputed,
     ReplaceWatcher,
     ReplaceProvideInject,
-    ReplaceTemplateRefs
+    ReplaceTemplateRefs,
+    ManagePerson
   },
   data() {
     return {
